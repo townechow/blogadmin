@@ -70,7 +70,7 @@
           title: '',
           author: '',
           category_id: '',
-          cover: '',
+          cover: 'http://ww2.sinaimg.cn/mw690/68f74d54jw8f22cfa95ijj20ku0kumy7.jpg',
           description: '',
           keyword: '',
           content: ''
@@ -83,7 +83,7 @@
             {required: true, message: '文章作者不能为空', trigger: 'blur'}
           ],
           cover: [
-            {required: true, message: '文章封面不能为空', trigger: 'blur'}
+            {required: false, message: '文章封面不能为空', trigger: 'blur'}
           ],
           description: [
             {required: true, message: '文章简介不能为空', trigger: 'blur'}
