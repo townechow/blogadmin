@@ -6,8 +6,8 @@
 </template>
 
 <script>
-// import E from "wangeditor";
-const E = process.browser ? require("wangeditor") : undefined;
+import E from "wangeditor";
+// const E = process.browser ? require("wangeditor") : undefined;
 export default {
   data() {
     return {
