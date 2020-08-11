@@ -69,7 +69,7 @@
             </div>
           </div>
           <div class="layout-copy">
-            2019 &copy; boblog.com
+            2019 &copy; 小_飞鸡
           </div>
         </Content>
       </Layout>

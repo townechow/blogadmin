@@ -41,15 +41,18 @@
         </div>
       </FormItem>
       <FormItem label="文章内容" prop="content">
-        <mavon-editor
+        <!-- <mavon-editor
           v-model="formValidate.content"
           :ishljs="true"
           ref=md>
-        </mavon-editor>
-
+        </mavon-editor> -->
+        <editor-bar
+          v-model="formValidate.content"
+          @change="change"
+        ></editor-bar>
       </FormItem>
       <FormItem>
-        <Button @click="handleReset('formValidate')">重置</Button>
+        <!-- <Button @click="handleReset('formValidate')">重置</Button> -->
         <Button type="primary" @click="handleSubmit('formValidate')" style="margin-left: 8px">提交</Button>
       </FormItem>
     </Form>
@@ -58,8 +61,10 @@
 <script>
   import {mapActions} from 'vuex';
   import getUploadToken from '../../libs/upload-token'
+  import EditorBar from "./editor";
 
   export default {
+    components: { EditorBar },
     data() {
       return {
         token: '',
@@ -83,7 +88,7 @@
             {required: true, message: '文章作者不能为空', trigger: 'blur'}
           ],
           cover: [
-            {required: true, message: '文章封面不能为空', trigger: 'blur'}
+            {required: false, message: '文章封面不能为空', trigger: 'blur'}
           ],
           description: [
             {required: true, message: '文章简介不能为空', trigger: 'blur'}
@@ -103,6 +108,9 @@
       this._getUploadToken();
     },
     methods: {
+      change(val) { //富文本内容变化
+       console.log(val);
+     },
       ...mapActions({
         getArticle: 'article/getArticle',
         updateArticle: 'article/updateArticle',

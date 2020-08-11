@@ -40,16 +40,21 @@
           </div>
         </div>
       </FormItem>
+      
       <FormItem label="文章内容" prop="content">
-        <mavon-editor
+        <!-- <mavon-editor
           v-model="formValidate.content"
           :ishljs="true"
           ref=md>
-        </mavon-editor>
-
+        </mavon-editor> -->
+      <editor-bar
+          v-model="formValidate.content"
+          :isClear="isClear"
+          @change="change"
+        ></editor-bar>
       </FormItem>
       <FormItem>
-        <Button @click="handleReset('formValidate')">重置</Button>
+        <!-- <Button @click="handleReset('formValidate')">重置</Button> -->
         <Button type="primary" @click="handleSubmit('formValidate')" style="margin-left: 8px">提交</Button>
       </FormItem>
     </Form>
@@ -58,10 +63,12 @@
 <script>
   import {mapActions} from 'vuex';
   import getUploadToken from '../../libs/upload-token'
-
+  import EditorBar from "./editor";
   export default {
+    components: { EditorBar },
     data() {
       return {
+        isClear: false,
         token: '',
         id: this.$route.params.id,
         detail: null,
@@ -102,6 +109,9 @@
       this._getUploadToken();
     },
     methods: {
+      change(val) { //富文本内容变化
+       console.log(val);
+     },
       ...mapActions({
         createArticle: 'article/createArticle',
         getCategoryList: 'category/getCategoryList'
