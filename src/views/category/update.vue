@@ -64,7 +64,7 @@
         try {
           await this.updateCategory(this.formValidate);
           this.$Message.success('更新成功!');
-          this.$router.push('/category');
+          this.$router.push('/admin/category');
 
         } catch (e) {
 

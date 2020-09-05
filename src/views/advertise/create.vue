@@ -49,7 +49,7 @@
         try {
           await this.createAdvertise(this.formValidate);
           this.$Message.success('创建成功!');
-          this.$router.push('/advertise');
+          this.$router.push('/admin/advertise');
 
         } catch (e) {
 

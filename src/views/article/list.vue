@@ -1,6 +1,6 @@
 <template>
   <section>
-    <Button type="primary" @click="toPathLink('/article/create')" icon="md-add" style="margin-bottom: 16px;">新增文章
+    <Button type="primary" @click="toPathLink('/admin/article/create')" icon="md-add" style="margin-bottom: 16px;">新增文章
     </Button>
     <section v-if="list.length > 0">
       <Table :loading="loading" border :columns="columns" :data="list">
@@ -123,7 +123,7 @@
       },
       // 更新
       update(id) {
-        this.$router.push(`/article/update/${id}`);
+        this.$router.push(`/admin/article/update/${id}`);
       },
       // 路由跳转
       toPathLink(path) {

@@ -49,7 +49,7 @@
         try {
           await this.createCategory(this.formValidate);
           this.$Message.success('创建成功!');
-          this.$router.push('/category');
+          this.$router.push('/admin/category');
 
         } catch (e) {
 

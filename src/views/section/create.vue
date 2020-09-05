@@ -62,7 +62,7 @@
           this.formValidate.column_chapter_id = this.column_chapter_id;
           await this.createSection(this.formValidate);
           this.$Message.success('新增成功!');
-          this.$router.push('/chapter/section/' + this.column_chapter_id);
+          this.$router.push('/admin/chapter/section/' + this.column_chapter_id);
 
         } catch (e) {
 

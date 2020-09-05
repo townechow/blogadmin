@@ -98,7 +98,7 @@
         this._getCommentsList();
       },
       reply(id) {
-        this.$router.push('/reply/' + id)
+        this.$router.push('/admin/reply/' + id)
       },
       // 删除分类
       destroy(id) {

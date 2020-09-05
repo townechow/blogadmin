@@ -77,11 +77,11 @@
       },
       // 创建
       create() {
-        this.$router.push('/chapter/section/create/' + this.column_chapter_id)
+        this.$router.push('/admin/chapter/section/create/' + this.column_chapter_id)
       },
       // 更新
       update(id) {
-        this.$router.push('/chapter/section/update/' + id + '?column_chapter_id=' + this.column_chapter_id)
+        this.$router.push('/admin/chapter/section/update/' + id + '?column_chapter_id=' + this.column_chapter_id)
       },
       // 删除
       destroy(id) {

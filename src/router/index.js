@@ -8,14 +8,14 @@ const routers = [
     component: (resolve) => require(['../views/login.vue'], resolve),
   },
   {
-    path: '/',
+    path: '/admin',
     component(resolve) {
       require(['../views/layout.vue'], resolve);
     },
     children: [
       {
         //todo: 首页
-        path: '/',
+        path: '/admin',
         name: 'index',
         meta: {module: "/", title: '首页'},
         component(resolve) {
@@ -32,71 +32,71 @@ const routers = [
       },
       //todo: 分类管理
       {
-        path: 'category',
+        path: '/admin/category',
         name: 'category',
         meta: {module: "/category", group: "category", title: '分类 - 列表'},
         component: (resolve) => require(['../views/category/list.vue'], resolve),
       },
       {
-        path: 'category/create',
+        path: '/admin/category/create',
         name: 'category/create',
         meta: {module: "/category/create", group: "category", title: '分类 - 创建'},
         component: (resolve) => require(['../views/category/create.vue'], resolve),
       },
       {
-        path: 'category/update/:id',
+        path: '/admin/category/update/:id',
         name: 'category/update',
         meta: {edit: true, module: "/category", group: "category", title: '分类 - 更新'},
         component: (resolve) => require(['../views/category/update.vue'], resolve),
       },
       //todo: 广告管理
       {
-        path: 'advertise',
+        path: '/admin/advertise',
         name: 'advertise',
         meta: {module: "/advertise", group: "advertise", title: '广告 - 列表'},
         component: (resolve) => require(['../views/advertise/list.vue'], resolve),
       },
       {
-        path: 'advertise/create',
+        path: '/admin/advertise/create',
         name: 'advertise/create',
         meta: {module: "/advertise/create", group: "advertise", title: '广告 - 创建'},
         component: (resolve) => require(['../views/advertise/create.vue'], resolve),
       },
       {
-        path: 'advertise/update/:id',
+        path: '/admin/advertise/update/:id',
         name: 'advertise/update',
         meta: {edit: true, module: "/advertise", group: "advertise", title: '广告 - 更新'},
         component: (resolve) => require(['../views/advertise/update.vue'], resolve),
       },
       //todo: 文章管理
       {
-        path: 'article',
+        path: '/admin/article',
         name: 'article',
         meta: {module: "/article", group: "article", title: '文章 - 列表'},
         component: (resolve) => require(['../views/article/list.vue'], resolve),
       },
       {
-        path: 'article/create',
+        path: '/admin/article/create',
         name: 'article/create',
         meta: {module: "/article/create", group: "article", title: '文章 - 创建'},
         component: (resolve) => require(['../views/article/create.vue'], resolve),
       },
       {
-        path: 'article/update/:id',
+        path: '/admin/article/update/:id',
         name: 'article/update',
         meta: {edit: true, module: "/article", group: "article", title: '文章 - 更新'},
         component: (resolve) => require(['../views/article/update.vue'], resolve),
       },
       //todo: 评论管理
       {
-        path: 'comments',
+        path: '/admin/comments',
         name: 'comments',
         meta: {module: "/comments", group: "comments", title: '评论 - 列表'},
         component: (resolve) => require(['../views/comments/list.vue'], resolve),
       },
       //todo: 回复评论管理
       {
-        path: 'reply/:comment_id',
+        path: '/admin/reply/:comment_id',
         name: 'reply',
         meta: {module: "/comments", group: "comments", title: '回复评论 - 列表'},
         component: (resolve) => require(['../views/reply/list.vue'], resolve),

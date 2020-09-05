@@ -7,7 +7,7 @@
 const menus = [
     {
       name: "首页",
-      path: "/",
+      path: "/admin",
       icon: "ios-navigate"
     },
     // 系统管理
@@ -26,17 +26,17 @@ const menus = [
     // 分类
     {
       name: "分类管理",
-      path: "category",
+      path: "/admin/category",
       icon: "md-move",
       children: [
         {
           name: "分类列表",
-          path: "/category",
+          path: "/admin/category",
           icon: "md-list"
         },
         {
           name: "分类创建",
-          path: "/category/create",
+          path: "/admin/category/create",
           icon: "md-add-circle"
         }
       ]
@@ -44,17 +44,17 @@ const menus = [
     // 文章
     {
       name: "文章管理",
-      path: "article",
+      path: "/admin/article",
       icon: "md-list-box",
       children: [
         {
           name: "文章列表",
-          path: "/article",
+          path: "/admin/article",
           icon: "md-list"
         },
         {
           name: "文章创建",
-          path: "/article/create",
+          path: "/admin/article/create",
           icon: "md-add-circle"
         }
       ]
@@ -62,17 +62,17 @@ const menus = [
     // 广告
     {
       name: "广告管理",
-      path: "advertise",
+      path: "/admin/advertise",
       icon: "ios-disc",
       children: [
         {
           name: "广告列表",
-          path: "/advertise",
+          path: "/admin/advertise",
           icon: "md-list"
         },
         {
           name: "广告创建",
-          path: "/advertise/create",
+          path: "/admin/advertise/create",
           icon: "md-add-circle"
         }
       ]
@@ -80,12 +80,12 @@ const menus = [
     // 评论
     {
       name: "评论管理",
-      path: "comments",
+      path: "/admin/comments",
       icon: "md-text",
       children: [
         {
           name: "评论列表",
-          path: "/comments",
+          path: "/admin/comments",
           icon: "md-list"
         }
       ]

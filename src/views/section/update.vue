@@ -75,7 +75,7 @@
           this.formValidate.id = this.id;
           await this.updateSection(this.formValidate);
           this.$Message.success('更新成功!');
-          this.$router.push('/chapter/section/' + this.column_chapter_id);
+          this.$router.push('/admin/chapter/section/' + this.column_chapter_id);
 
         } catch (e) {
 

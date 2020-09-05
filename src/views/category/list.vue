@@ -1,6 +1,6 @@
 <template>
   <section>
-    <Button type="primary" @click="toPathLink('/category/create')" icon="md-add" style="margin-bottom: 16px;">新增分类
+    <Button type="primary" @click="toPathLink('/admin/category/create')" icon="md-add" style="margin-bottom: 16px;">新增分类
     </Button>
 
     <section v-if="list.length > 0">
@@ -74,7 +74,7 @@
       },
       // 更新
       update(id) {
-        this.$router.push(`/category/update/${id}`);
+        this.$router.push(`/admin/category/update/${id}`);
       },
       // 删除分类
       destroy(id) {

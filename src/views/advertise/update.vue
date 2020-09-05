@@ -64,7 +64,7 @@
         try {
           await this.updateAdvertise(this.formValidate);
           this.$Message.success('更新成功!');
-          this.$router.push('/advertise');
+          this.$router.push('/admin/advertise');
 
         } catch (e) {
 

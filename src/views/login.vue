@@ -84,7 +84,7 @@
             this.$ls.set('token', ret.data.token);
             // 跳转
             this.$Message.success("登录成功！");
-            window.location.href = '/'
+            window.location.href = '/admin'
 
           }).catch(err => {
             this.buttonLoading = false

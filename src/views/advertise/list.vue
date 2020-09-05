@@ -1,6 +1,6 @@
 <template>
   <section>
-    <Button type="primary" @click="toPathLink('/advertise/create')" icon="md-add" style="margin-bottom: 16px;">新增广告
+    <Button type="primary" @click="toPathLink('/admin/advertise/create')" icon="md-add" style="margin-bottom: 16px;">新增广告
     </Button>
 
     <section v-if="list.length > 0">
@@ -80,7 +80,7 @@
       },
       // 更新
       update(id) {
-        this.$router.push(`/advertise/update/${id}`);
+        this.$router.push(`/admin/advertise/update/${id}`);
       },
       // 删除广告
       destroy(id) {

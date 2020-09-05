@@ -169,7 +169,7 @@
         try {
           await this.updateArticle(this.formValidate);
           this.$Message.success('更新成功!');
-          this.$router.push('/article');
+          this.$router.push('/admin/article');
 
         } catch (e) {
 
