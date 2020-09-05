@@ -124,7 +124,7 @@
       exitAccount() {
         Vue.ls.remove("token");
         this.$router.replace({
-          path: '/login'
+          path: '/admin/login'
         });
       },
 

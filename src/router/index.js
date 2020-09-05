@@ -1,6 +1,6 @@
 const routers = [
   {
-    path: '/login',
+    path: '/admin/login',
     meta: {
       title: "登录",
       noAuth: true

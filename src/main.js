@@ -50,7 +50,7 @@ router.beforeEach(async (to, from, next) => {
     }).catch(err => {
       Vue.prototype.$Message.error(err.data.msg || '权限未授权')
       setTimeout(() => {
-        next('/login')
+        next('/admin/login')
       }, 1500);
     })
 
@@ -62,7 +62,7 @@ router.beforeEach(async (to, from, next) => {
     } else {
       Vue.prototype.$Message.error('权限未授权')
       setTimeout(() => {
-        next('/login')
+        next('/admin/login')
       }, 1500)
     }
   }
